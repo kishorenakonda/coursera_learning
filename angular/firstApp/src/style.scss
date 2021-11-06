@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+@include mat-core();
+@import 'theme.scss';
+
+// .first-theme {
+//   @include angular-material-theme($first-theme);
+// }
+
+// .second-theme {
+//   @include angular-material-theme($second-theme);
+// }
+
+
+// .custom-theme {
+//   @include angular-material-theme($custom-theme);
+// }
+
+// .alter

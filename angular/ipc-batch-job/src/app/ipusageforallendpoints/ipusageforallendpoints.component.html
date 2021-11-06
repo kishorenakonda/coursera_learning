@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="col-md-12  m-t-20">
+        <table class="table table-bordered">
+            <thead>
+                <th>S.No</th>
+                <th>Endpoint Id</th>
+                <th>Endpoint Name</th>
+                <th>Total No.of IP</th>
+                <th>Used IP</th>
+                <th>UnUsed IP</th>
+                <th>Used IP Percentage</th>
+                <th>UnUsed IP Percentage</th>
+            </thead>
+
+
+
+            <tr *ngFor="let details of ipUsageDetails">
+
+                <td>{{details.sno}}</td>
+                <td>{{details.endpointId}}</td>
+                <td class="myPointer" (click)="getIpAllocatedDetails(details.endpointId)">{{details.endpointName}}</td>
+                <td>{{details.totalIP}}</td>
+                <td>{{details.usedIP}}</td>
+                <td>{{details.unUsedIP}}</td>
+                <td>{{details.usedPercentage}}</td>
+                <td>{{details.unUsedPercentage}}</td>
+
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <button class="btn btn-primary" (click)="exportAsXLSX()"><i class="fa fa-download" aria-hidden="true"></i>
+            Download </button>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+img {
+    /* height: 500px; */
+}
+
+.photographyModel {
+    display: block;
+    opacity: 1;
+}
+
+.card{
+    cursor: pointer;
+}
+
+.myVideo{
+    height: 10px;
+}

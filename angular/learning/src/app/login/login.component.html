@@ -1,0 +1,77 @@
+<div class="container margin-t-5p">
+  <div class="col-sm-6 offset-sm-3">
+
+    <div class="card form-border">
+
+      <div class="login-header text-center padding-all-15">
+        Login Form
+      </div>
+
+      <form class="padding-all-10" name="loginForm">
+
+        <div class="padding-t-10 row form-group">
+          <label class="col-sm-3 form-label">
+            Username
+          </label>
+          <div class="col-sm-9">
+            <input type="text" name="username" class="form-control" [(ngModel)]="loginForm.username"/>
+          </div>
+        </div>
+
+        <div class="padding-t-10 row form-group">
+          <label class="col-sm-3 form-label">
+            Password
+          </label>
+          <div class="col-sm-9">
+            <input type="text" name="password" class="form-control" [(ngModel)]="loginForm.password"/>
+          </div>
+        </div>
+
+        <div class="padding-t-10 row form-group">
+          <label class="col-sm-3 form-label">
+            Gender
+          </label>
+          <div class="col-sm-9">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="male" value="male" name="gender" class="custom-control-input" [(ngModel)]="loginForm.gender">
+              <label class="custom-control-label" for="male"> Male </label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="female" value="female" name="gender" class="custom-control-input" [(ngModel)]="loginForm.gender">
+              <label class="custom-control-label" for="female"> Female </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="padding-t-10 row form-group">
+          <label class="col-sm-3 form-label">
+            Hobbies
+          </label>
+          <div class="col-sm-9">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="hobbies" >
+              <label class="custom-control-label" for="television">Watching Television</label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="playing" value="playing" name="hobbies">
+              <label class="custom-control-label" for="playing">Playing</label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="cooking" value="cooking" name="hobbies">
+              <label class="custom-control-label" for="cooking">Cooking</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="padding-t-20">
+          <button class="btn btn-primary btn-block" (click)="submitForm()"> Submit </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>

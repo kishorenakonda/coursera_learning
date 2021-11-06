@@ -1,0 +1,45 @@
+<!-- <mat-card>
+  Main Theme:
+  <button mat-raised-button color="primary">
+    Primary
+  </button>
+  <button mat-raised-button color="accent">
+    accent
+  </button>
+</mat-card>
+
+
+<mat-card class="alternate-theme">
+  Alternate Theme:
+  <button mat-raised-button color="primary">
+    Primary
+  </button>
+  <button mat-raised-button color="accent">
+    accent
+  </button>
+</mat-card> -->
+
+<!-- [ngClass]="changetheme ? 'first-theme': 'second-theme'" -->
+<!-- <mat-card [ngClass]="changetheme ? 'first-theme': 'second-theme'"> -->
+<!-- <mat-card [class.second-theme]="changetheme">
+  <button mat-raised-button (click)="toggleTheme()"> Switch theme </button>
+  <button mat-raised-button color="primary">
+    Primary
+  </button>
+
+  <button mat-raised-button color="accent">
+    Accent
+  </button>
+</mat-card> -->
+
+<!-- otherTheme ? {'custom'} : 'alternative' -->
+<!-- <div [ngClass]="otherTheme ? {'custom'} : 'alternative'"> -->
+
+<div [ngClass]="toggleThemeClass()">
+  <mat-toolbar color="primary">
+    <button mat-raised-button color="accent"> Home </button>
+  </mat-toolbar>
+  <div class="m-t-20 p-b-20">
+    <button mat-raised-button color="accent" (click)="toggleTheme()">Change theme</button>
+  </div>
+</div>

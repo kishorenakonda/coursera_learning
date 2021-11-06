@@ -1,0 +1,41 @@
+.login-header {
+  background-color: blue;
+  color: white;
+}
+
+.padding-all-15 {
+  padding: 15px;
+}
+
+.padding-all-10 {
+  padding: 10px;
+}
+
+.padding-t-10 {
+  padding-top: 10px;
+}
+
+.padding-t-20 {
+  padding-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-t-5p {
+  margin-top: 5%;
+  /* margin-bottom: 5%; */
+}
+
+.form-border {
+  border: 1px solid blue;
+}
+
+.float-right {
+  float: right;
+}
+
+.card {
+  background-color: #fbfbfb;
+}

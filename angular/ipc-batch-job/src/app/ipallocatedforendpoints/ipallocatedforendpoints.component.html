@@ -1,0 +1,24 @@
+<div class="container m-t-20">
+  <div class="col-md-12">
+    <table class="table table-bordered">
+      <thead>
+        <th>S.No</th>
+        <th>IP Address</th>
+        <th>Name</th>
+        <th>Description</th>
+      </thead>
+
+      <tr *ngFor="let ipdetails of ipAllocated ; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{ipdetails.subnet_address}}</td>
+        <td>{{ipdetails.name}}</td>
+        <td>{{ipdetails.description}}</td>
+      </tr>
+    </table>
+
+  </div>
+  <div class="col-md-6 m-b-20">
+    <button class="btn btn-primary" (click)="exportAsXLSX()"><i class="fa fa-download" aria-hidden="true"></i>
+      Download </button>
+  </div>
+</div>

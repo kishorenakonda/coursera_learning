@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.p-b-20 {
+  padding-bottom: 20px;
+}
