@@ -1,7 +1,11 @@
-var rect = {
-    perimeter: (x, y) => (2 * (x + y)),
-    area: (x, y) => (x * y)
-};
+// Internal Object creation and executing the function
+// var rect = {
+//     perimeter: (x, y) => (2 * (x + y)),
+//     area: (x, y) => (x * y)
+// };
+
+// Invoking the function present in external file
+var rect = require('./rectangle');
 
 function solveRectangle(l, b) {
     console.log("<-- Solving for rectangle with l =" + l + " and b =" + b + "-->");
