@@ -1,12 +1,44 @@
 const express = require('express');
 const http = require('http');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 const hostname = "localhost";
 const port = "3000";
 
 const app = express();
 app.use(morgan('dev'));
+app.use(bodyParser.json());
+
+const dishes = '/dishes';
+const dishApiUrl = dishes + '/:dishId';
+
+// API Request
+app.all(dishApiUrl, (req, res, next) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    next();
+});
+
+app.get(dishApiUrl, (req, res, next) => {
+    res.end('Will send details of the dish: ' + req.params.dishId + ' to you');
+});
+
+app.post(dishApiUrl, (req, res, next) => {
+    // res.statusCode = 403;
+    // res.end('POST Operation not supported on ' + dishes + '/' + req.params.dishId);
+    res.end('Will add the dish: ' + req.body.name + ' with details: ' + req.body.description);
+});
+
+app.put(dishApiUrl, (req, res, next) => {
+    // res.end('PUT Operation not supported on ' + dishes + '/' + req.params.dishId);
+    res.write('Updating the dish: ' + req.params.dishId);
+    res.end('Will update the dish: ' + req.body.name + ' with details: ' + req.body.description);
+});
+
+app.delete(dishApiUrl, (req, res, next) => {
+    res.end('Deleting dish: ' + req.params.dishId);
+});
 
 // With this we can serve the static HTML files using express
 app.use(express.static(__dirname + '/public'));
